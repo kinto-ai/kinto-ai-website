@@ -92,8 +92,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <!-- Cal.com embed -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", {origin:"https://cal.com"});
+      Cal("ui", {"cssVarsPerTheme":{"dark":{"cal-brand":"#ffb800"}},"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
     <style>
         * {
             margin: 0;
@@ -1039,7 +1043,7 @@
             <a href="#proceso" data-es="Servicios" data-en="Services">Servicios</a>
             <a href="#fundador" data-es="Nosotros" data-en="About">Nosotros</a>
             <a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a>
-            <a href="javascript:void(0)" onclick="openCalendly()" class="nav-cta" data-es="Agenda una Llamada" data-en="Book a Call">Agenda una Llamada</a>
+            <a href="javascript:void(0)" data-cal-link="kinto-ai-aus0dx/kinto-ai-call" data-cal-config='{"layout":"month_view","theme":"dark"}' class="nav-cta" data-es="Agenda una Llamada" data-en="Book a Call">Agenda una Llamada</a>
             <div class="lang-toggle">
                 <button class="lang-btn active" onclick="setLang('es')">ES</button>
                 <button class="lang-btn" onclick="setLang('en')">EN</button>
@@ -1063,7 +1067,7 @@
             <p class="hero-subtitle typing-hidden" data-es="Escala tu negocio sin aumentar tu equipo." data-en="Scale your business without growing your team.">Escala tu negocio sin aumentar tu equipo.</p>
             <p class="typing-hidden" data-es="Convierte los cuellos de botella de tu día a día en flujos de trabajo con IA, listos para usarse, que realmente se implementan y generan ingresos, sin que tengas que volverte un experto en tecnología." data-en="Turn your daily bottlenecks into ready-to-use AI workflows that actually get implemented and generate revenue, without becoming a tech expert.">Convierte los cuellos de botella de tu día a día en flujos de trabajo con IA, listos para usarse, que realmente se implementan y generan ingresos, sin que tengas que volverte un experto en tecnología.</p>
             <div class="hero-buttons typing-hidden">
-                <a href="javascript:void(0)" onclick="openCalendly()" class="btn btn-primary" data-es="Agenda una Llamada" data-en="Book a Call">Agenda una Llamada</a>
+                <a href="javascript:void(0)" data-cal-link="kinto-ai-aus0dx/kinto-ai-call" data-cal-config='{"layout":"month_view","theme":"dark"}' class="btn btn-primary" data-es="Agenda una Llamada" data-en="Book a Call">Agenda una Llamada</a>
                 <a href="#proceso" class="btn btn-secondary" data-es="Ver Cómo Funciona" data-en="See How It Works">Ver Cómo Funciona</a>
             </div>
         </div>
@@ -1136,7 +1140,7 @@
                 <p data-es="Al analizar el futuro del trabajo durante su formación, Kendal decidió no seguir la ruta corporativa tradicional. En su lugar, optó por especializarse en la tecnología que está redefiniendo el empleo: la Inteligencia Artificial. Su objetivo fue claro desde el inicio: dominar las herramientas que pueden liberar el verdadero potencial humano." data-en="While analyzing the future of work during his studies, Kendal decided not to follow the traditional corporate route. Instead, he chose to specialize in the technology that is redefining employment: Artificial Intelligence. His goal was clear from the start: master the tools that can unlock true human potential.">Al analizar el futuro del trabajo durante su formación, Kendal decidió no seguir la ruta corporativa tradicional. En su lugar, optó por especializarse en la tecnología que está redefiniendo el empleo: la Inteligencia Artificial. Su objetivo fue claro desde el inicio: dominar las herramientas que pueden liberar el verdadero potencial humano.</p>
                 <p data-es="Hoy, a través de KINTO AI, ayuda a pequeñas y medianas empresas a modernizar sus operaciones. Su enfoque es consultivo y personalizado: primero estudia las necesidades del negocio para diseñar el flujo de trabajo ideal, implementando sistemas de IA que no solo eliminan tareas repetitivas, sino que ayudan a sus clientes a vender más y crecer de manera sostenible." data-en="Today, through KINTO AI, he helps small and medium businesses modernize their operations. His approach is consultative and personalized: first studying business needs to design the ideal workflow, implementing AI systems that not only eliminate repetitive tasks but help clients sell more and grow sustainably.">Hoy, a través de KINTO AI, ayuda a pequeñas y medianas empresas a modernizar sus operaciones. Su enfoque es consultivo y personalizado: primero estudia las necesidades del negocio para diseñar el flujo de trabajo ideal, implementando sistemas de IA que no solo eliminan tareas repetitivas, sino que ayudan a sus clientes a vender más y crecer de manera sostenible.</p>
                 <div class="founder-cta">
-                    <a href="javascript:void(0)" onclick="openCalendly()" class="btn btn-primary" data-es="Trabajemos Juntos" data-en="Let's Work Together">Trabajemos Juntos</a>
+                    <a href="javascript:void(0)" data-cal-link="kinto-ai-aus0dx/kinto-ai-call" data-cal-config='{"layout":"month_view","theme":"dark"}' class="btn btn-primary" data-es="Trabajemos Juntos" data-en="Let's Work Together">Trabajemos Juntos</a>
                 </div>
             </div>
         </div>
@@ -1149,7 +1153,7 @@
         <div class="cta-content fade-scale">
             <h2 data-es="Escala tu Negocio con IA" data-en="Scale Your Business with AI">Escala tu Negocio con IA</h2>
             <p data-es="Agenda una llamada gratuita de 15 minutos. Sin compromiso, sin jerga técnica. Solo soluciones reales para tu negocio." data-en="Book a free 15-minute call. No commitment, no technical jargon. Just real solutions for your business.">Agenda una llamada gratuita de 15 minutos. Sin compromiso, sin jerga técnica. Solo soluciones reales para tu negocio.</p>
-            <a href="javascript:void(0)" onclick="openCalendly()" class="btn btn-primary" data-es="Agenda tu Llamada Gratis" data-en="Book Your Free Call">Agenda tu Llamada Gratis</a>
+            <a href="javascript:void(0)" data-cal-link="kinto-ai-aus0dx/kinto-ai-call" data-cal-config='{"layout":"month_view","theme":"dark"}' class="btn btn-primary" data-es="Agenda tu Llamada Gratis" data-en="Book Your Free Call">Agenda tu Llamada Gratis</a>
         </div>
     </section>
 
@@ -1199,16 +1203,6 @@
          JAVASCRIPT
     ========================================== -->
     <script>
-        // ========================================
-        // CALENDLY POPUP
-        // ========================================
-        function openCalendly() {
-            Calendly.initPopupWidget({
-                url: 'https://calendly.com/kendal-kintoai/new-meeting?background_color=0b0b0b&text_color=ffffff&primary_color=ffb800'
-            });
-            return false;
-        }
-
         // ========================================
         // LANGUAGE TOGGLE
         // ========================================
