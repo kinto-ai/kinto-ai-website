@@ -92,6 +92,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/sc-motion.css">
     <!-- Cal.com embed -->
     <script type="text/javascript">
       (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
@@ -126,7 +127,9 @@
 
         body {
             font-family: 'DM Sans', sans-serif;
-            background-color: var(--black);
+            /* --sc-canvas la escribe el motor de scroll interpolando entre los
+               data-sc-drift de cada seccion; sin motor, cae a --black */
+            background-color: var(--sc-canvas, var(--black));
             color: var(--white);
             overflow-x: hidden;
             line-height: 1.6;
@@ -1016,6 +1019,29 @@
                 display: none;
             }
         }
+
+        /* ============================================
+           BOTON FLOTANTE DE WHATSAPP
+        ============================================ */
+        .wa-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 999;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #fff;
+            display: grid;
+            place-items: center;
+            font-size: 1.7rem;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+            transition: transform 0.2s ease;
+        }
+        .wa-float:hover { transform: scale(1.08); }
+    
     </style>
 </head>
 <body>
@@ -1076,16 +1102,16 @@
     <!-- ==========================================
          PROCESS SECTION
     ========================================== -->
-    <section class="section" id="proceso">
+    <section class="section" id="proceso" data-sc-act="flow" data-sc-drift="#0B0B0B">
         <div class="fade-up">
             <p class="section-label" data-es="CÓMO TRABAJAMOS" data-en="HOW WE WORK">CÓMO TRABAJAMOS</p>
             <h2 class="section-title" data-es="Nuestro Proceso" data-en="Our Process">Nuestro Proceso</h2>
             <p class="section-description" data-es="Un enfoque metódico y de bajo riesgo que comienza entendiendo tu negocio, no saltando directamente a las herramientas." data-en="A methodical, low-risk approach that starts with understanding your business - not jumping straight into tools.">Un enfoque metódico y de bajo riesgo que comienza entendiendo tu negocio, no saltando directamente a las herramientas.</p>
         </div>
 
-        <div class="process-grid">
+        <div class="process-grid" data-sc-in data-sc-stagger="180">
             <!-- Card 1: Discover & Diagnose -->
-            <div class="process-card fade-left">
+            <div class="process-card">
                 <div class="process-number" data-count="1">01</div>
                 <div class="process-icon"><i class="fas fa-magnifying-glass"></i></div>
                 <h3 data-es="Descubrir y Diagnosticar" data-en="Discover &amp; Diagnose">Descubrir y Diagnosticar</h3>
@@ -1098,7 +1124,7 @@
             </div>
 
             <!-- Card 2: Design, Build & Validate -->
-            <div class="process-card fade-up">
+            <div class="process-card">
                 <div class="process-number" data-count="2">02</div>
                 <div class="process-icon"><i class="fas fa-code"></i></div>
                 <h3 data-es="Diseñar, Construir y Validar" data-en="Design, Build &amp; Validate">Diseñar, Construir y Validar</h3>
@@ -1111,7 +1137,7 @@
             </div>
 
             <!-- Card 3: Launch, Monitor & Optimize -->
-            <div class="process-card fade-right">
+            <div class="process-card">
                 <div class="process-number" data-count="3">03</div>
                 <div class="process-icon"><i class="fas fa-chart-line"></i></div>
                 <h3 data-es="Lanzar, Monitorear y Optimizar" data-en="Launch, Monitor &amp; Optimize">Lanzar, Monitorear y Optimizar</h3>
@@ -1128,10 +1154,10 @@
     <!-- ==========================================
          FOUNDER SECTION
     ========================================== -->
-    <section class="founder-section" id="fundador">
+    <section class="founder-section" id="fundador" data-sc-act="flow" data-sc-drift="#17171c">
         <div class="founder-content">
             <div class="founder-image-wrapper fade-left">
-                <img src="Portrait.jpeg" alt="Kendal Segura - Fundador de KINTO AI" class="founder-image">
+                <img data-sc-parallax="-0.10" src="Portrait.jpeg" alt="Kendal Segura - Fundador de KINTO AI" class="founder-image">
             </div>
             <div class="founder-text fade-right">
                 <p class="section-label" data-es="Conoce al Fundador" data-en="Meet the Founder">Conoce al Fundador</p>
@@ -1146,14 +1172,17 @@
         </div>
     </section>
 
+
     <!-- ==========================================
          CTA SECTION
     ========================================== -->
-    <section class="cta-section" id="contact">
+
+    <section class="cta-section" id="contact" data-sc-act="flow" data-sc-drift="#12100a">
         <div class="cta-content fade-scale">
             <h2 data-es="Escala tu Negocio con IA" data-en="Scale Your Business with AI">Escala tu Negocio con IA</h2>
             <p data-es="Agenda una llamada gratuita de 15 minutos. Sin compromiso, sin jerga técnica. Solo soluciones reales para tu negocio." data-en="Book a free 15-minute call. No commitment, no technical jargon. Just real solutions for your business.">Agenda una llamada gratuita de 15 minutos. Sin compromiso, sin jerga técnica. Solo soluciones reales para tu negocio.</p>
             <a href="javascript:void(0)" data-cal-link="kinto-ai-aus0dx/kinto-ai-call" data-cal-config='{"layout":"month_view","theme":"dark"}' class="btn btn-primary" data-es="Agenda tu Llamada Gratis" data-en="Book Your Free Call">Agenda tu Llamada Gratis</a>
+            <p style="font-size: 0.82rem; color: var(--gray-300); margin-top: 18px; max-width: 520px; margin-left:auto; margin-right:auto;" data-es="La llamada es por videoconferencia y se graba para dar seguimiento a lo conversado. M&aacute;s detalles en la <a href='/privacidad.html' style='color: var(--gold);'>Pol&iacute;tica de Privacidad</a>." data-en="The call happens over video conference and is recorded to follow up on what was discussed. Details in the <a href='/privacidad.html' style='color: var(--gold);'>Privacy Policy</a>.">La llamada es por videoconferencia y se graba para dar seguimiento a lo conversado. M&aacute;s detalles en la <a href="/privacidad.html" style="color: var(--gold);">Pol&iacute;tica de Privacidad</a>.</p>
         </div>
     </section>
 
@@ -1184,12 +1213,16 @@
                     <li><a href="#proceso" data-es="Servicios" data-en="Services">Servicios</a></li>
                     <li><a href="#fundador" data-es="Nosotros" data-en="About">Nosotros</a></li>
                     <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+                    <li><a href="/faq.html" data-es="Preguntas Frecuentes" data-en="FAQ">Preguntas Frecuentes</a></li>
+                    <li><a href="/privacidad.html" data-es="Privacidad" data-en="Privacy">Privacidad</a></li>
+                    <li><a href="/terminos.html" data-es="T&eacute;rminos" data-en="Terms">T&eacute;rminos</a></li>
                 </ul>
             </div>
             <div class="footer-links">
                 <h4 data-es="Conecta" data-en="Connect">Conecta</h4>
                 <ul>
                     <li><a href="mailto:kendal@kintoai.com"><i class="fas fa-envelope" style="margin-right: 8px;"></i>kendal@kintoai.com</a></li>
+                    <li><a href="https://wa.me/50687020081" target="_blank" rel="noopener"><i class="fab fa-whatsapp" style="margin-right: 8px;"></i>+506 8702 0081</a></li>
                     <li><a href="https://www.linkedin.com/in/kendal-segura-mata-791a5035b/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" style="margin-right: 8px;"></i>Kendal Segura</a></li>
                 </ul>
             </div>
@@ -1461,5 +1494,16 @@
             }
         });
     </script>
+    <!-- ============================================
+         MOTOR DE SCROLL (scrollcraft engine)
+         Anima: escalonado de tarjetas (data-sc-stagger) y tono de fondo
+         entre secciones (data-sc-drift). El hero conserva su animacion
+         propia y NO esta marcado. sc-motion.css trae solo la maquinaria,
+         sin el reset del motor, para no pisar los estilos del sitio.
+    ============================================ -->
+    <a class="wa-float" href="https://wa.me/50687020081" target="_blank" rel="noopener" aria-label="WhatsApp KINTO AI"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="assets/scrollcraft.js"></script>
+    <script>ScrollCraft.mount(document.body);</script>
 </body>
 </html>

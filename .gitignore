@@ -7,8 +7,24 @@
 !.gitignore
 !generate-og-image.html
 
+# Incluir la business card NFC (kintoai.com/card)
+!card/
+!card/**
+
 # Incluir carpeta de imágenes
 !images/
 !images/**
+
+# Motor de scroll y su CSS de maquinaria
+!assets/
+!assets/**
+
+# Paginas legales, 404 y SEO tecnico
+!faq.html
+!privacidad.html
+!terminos.html
+!404.html
+!robots.txt
+!sitemap.xml
 
 .vercel
