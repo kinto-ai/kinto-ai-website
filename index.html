@@ -85,7 +85,7 @@
     <!-- =============================================
          FAVICON
     ============================================= -->
-    <link rel="icon" type="image/png" href="/images/kinto-icon-black-128.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon-simple.svg">
     <link rel="apple-touch-icon" href="/images/kinto-icon-black-128.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -157,7 +157,7 @@
         }
 
         header.scrolled {
-            background: rgba(11, 11, 11, 0.97);
+            background: #0B0B0B;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
         }
 
@@ -202,7 +202,6 @@
             position: absolute;
             background: var(--gold);
             border-radius: 50%;
-            box-shadow: 0 0 8px rgba(255, 184, 0, 0.4);
         }
 
         .kinto-logo .k-n1 { width: 7px; height: 7px; top: 3px; left: 3px; }
@@ -270,8 +269,9 @@
         }
 
         .nav-cta {
-            background: var(--gold);
-            color: var(--black) !important;
+            background: transparent;
+            border: 1px solid var(--gray-800);
+            color: var(--white) !important;
             padding: 8px 20px;
             border-radius: 8px;
             font-weight: 700;
@@ -422,7 +422,6 @@
         .btn-primary:hover {
             background-color: var(--gold-dark);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 184, 0, 0.3);
         }
 
         .btn-secondary {
@@ -458,7 +457,7 @@
         }
 
         .section-title {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'DM Sans', sans-serif; font-weight: 700; letter-spacing: -0.01em;
             font-size: 3rem;
             font-weight: 700;
             color: var(--white);
@@ -508,11 +507,7 @@
             transition: transform 0.4s ease;
         }
 
-        .process-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(255, 184, 0, 0.1);
-        }
+        
 
         .process-card:hover::before {
             transform: scaleX(1);
@@ -544,7 +539,7 @@
         }
 
         .process-card h3 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'DM Sans', sans-serif; font-weight: 700; letter-spacing: -0.01em;
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--white);
@@ -625,7 +620,6 @@
             object-fit: cover;
             object-position: center 30%;
             border: 3px solid var(--gold);
-            box-shadow: 0 0 40px rgba(255, 184, 0, 0.15);
         }
 
         .founder-text .section-label {
@@ -633,7 +627,7 @@
         }
 
         .founder-text h2 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'DM Sans', sans-serif; font-weight: 700; letter-spacing: -0.01em;
             font-size: 2.5rem;
             font-weight: 700;
             color: var(--white);
@@ -675,7 +669,6 @@
             width: 200%;
             height: 200%;
             background: radial-gradient(circle, rgba(255, 184, 0, 0.04) 0%, transparent 60%);
-            animation: pulse-cta 10s ease-in-out infinite;
         }
 
         @keyframes pulse-cta {
@@ -689,7 +682,7 @@
         }
 
         .cta-section h2 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'DM Sans', sans-serif; font-weight: 700; letter-spacing: -0.01em;
             font-size: 3rem;
             font-weight: 700;
             color: var(--gold);
@@ -769,7 +762,7 @@
         }
 
         .footer-links h4 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'DM Sans', sans-serif; font-weight: 700; letter-spacing: -0.01em;
             font-size: 1.2rem;
             font-weight: 700;
             color: var(--white);
@@ -832,7 +825,7 @@
                 top: 70px;
                 left: 0;
                 right: 0;
-                background: rgba(11, 11, 11, 0.98);
+                background: #0B0B0B;
                 flex-direction: column;
                 padding: 30px 20px;
                 gap: 20px;
@@ -930,7 +923,7 @@
         .fade-up {
             opacity: 0;
             transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            transition: opacity .6s cubic-bezier(0.25,0.8,0.25,1), transform .6s cubic-bezier(0.25,0.8,0.25,1);
         }
 
         .fade-up.visible {
@@ -941,7 +934,7 @@
         .fade-left {
             opacity: 0;
             transform: translateX(-40px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
+            transition: opacity .6s cubic-bezier(0.25,0.8,0.25,1), transform .6s cubic-bezier(0.25,0.8,0.25,1);
         }
 
         .fade-left.visible {
@@ -952,7 +945,7 @@
         .fade-right {
             opacity: 0;
             transform: translateX(40px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
+            transition: opacity .6s cubic-bezier(0.25,0.8,0.25,1), transform .6s cubic-bezier(0.25,0.8,0.25,1);
         }
 
         .fade-right.visible {
@@ -963,7 +956,7 @@
         .fade-scale {
             opacity: 0;
             transform: scale(0.92);
-            transition: opacity 0.7s ease, transform 0.7s ease;
+            transition: opacity .6s cubic-bezier(0.25,0.8,0.25,1), transform .6s cubic-bezier(0.25,0.8,0.25,1);
         }
 
         .fade-scale.visible {
@@ -1042,6 +1035,200 @@
         }
         .wa-float:hover { transform: scale(1.08); }
     
+
+        /* ═══════ MOCKUP MORNINGSIDE ═══════ */
+        /* Fase 1: hero mas grande, con mas aire, oro en el titular */
+        .hero-content h1 { font-size: clamp(3rem, 7.5vw, 5.4rem); line-height: 1.12; font-weight: 600; letter-spacing: -0.01em; color: var(--white) !important; }
+        .hero-content h1 .au { color: var(--gold); }
+        /* el CTA del hero pasa a blanco solido (patron Morningside): el oro del hero vive en el titular */
+        .hero-buttons .btn-primary { background: var(--white) !important; color: var(--black) !important; border-color: var(--white) !important; }
+        .hero-content { max-width: 900px; }
+        .hero-subtitle { font-size: clamp(1.05rem, 2vw, 1.3rem); }
+
+        /* Fase 2: el sermon. El extracto sc-motion.css no trae las reglas de
+           escenario fijo (el sitio nunca habia usado un acto pin), van aqui. */
+        .sermon { position: relative; }
+        .sermon .sc-stage {
+            position: sticky; top: 0;
+            height: 100vh; height: 100svh;
+            overflow: clip;
+            display: grid; place-items: center; text-align: center;
+            padding: 0 24px;
+        }
+        .sermon-stage p {
+            grid-area: 1 / 1;
+            max-width: 21ch;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: clamp(1.7rem, 4.4vw, 3.1rem);
+            line-height: 1.3;
+            color: var(--gray-300);
+            text-wrap: balance;
+        }
+        .sermon-stage .sermon-turn { color: var(--white); font-weight: 700; }
+
+        /* Fase 3: proceso con numero gigante serif y wireframe de trazo */
+        .process-number {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-size: 5.2rem !important;
+            font-weight: 600 !important;
+            line-height: 1 !important;
+            color: #b8933e !important;
+            opacity: .95;
+        }
+        .process-icon--wire i { display: none; }
+        .process-icon--wire { background: none !important; border: none !important; }
+        .process-icon--wire .wire { width: 56px; height: 56px; }
+        .process-icon--wire .wire * { fill: none; stroke: #7a7a82; stroke-width: 1.4; stroke-linejoin: round; stroke-linecap: round; }
+
+
+        /* proceso apilado: una tarjeta por fila, numero | wireframe | contenido */
+        .process-grid--stacked { display: flex !important; flex-direction: column; gap: 22px; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .process-grid--stacked .process-card {
+            display: grid; grid-template-columns: 110px 72px 1fr;
+            gap: 26px; align-items: start; text-align: left;
+        }
+        .process-grid--stacked .process-number { grid-row: 1 / -1; align-self: center; }
+        .process-grid--stacked .process-icon { grid-row: 1 / -1; align-self: center; margin: 0 !important; }
+        .process-grid--stacked h3, .process-grid--stacked .process-subtitle, .process-grid--stacked ul, .process-grid--stacked .process-line { grid-column: 3; }
+        @media (max-width: 900px) {
+            .process-grid--stacked .process-card { grid-template-columns: 64px 1fr; }
+            .process-grid--stacked .process-icon { display: none; }
+            .process-grid--stacked h3, .process-grid--stacked .process-subtitle, .process-grid--stacked ul, .process-grid--stacked .process-line { grid-column: 2; }
+        }
+
+        /* FAQ en la home */
+        .faq-list { max-width: 760px; margin: 0 auto; }
+        .faq-item { border: 1px solid var(--gray-800); border-radius: 10px; margin-bottom: 14px; background: rgba(26,26,26,.6); overflow: hidden; }
+        .faq-item summary { cursor: pointer; list-style: none; padding: 20px 24px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; color: var(--gold); font-size: 1.4rem; line-height: 1; flex-shrink: 0; transition: transform .3s ease; }
+        .faq-item[open] summary::after { transform: rotate(45deg); }
+        .faq-item .faq-body { padding: 0 24px 20px; color: var(--gray-300); }
+
+        /* cierre tipografico: mas corto y con el turn en oro… no: oro unico = titular
+           del acto. El turn va en blanco, la seccion ya entibia el fondo por drift. */
+        .sermon--cierre .sermon-stage p { max-width: 24ch; }
+
+
+        /* proceso v2: numero gigante, icono y titulo grandes, frases en vez de bullets */
+        .process-grid--stacked .process-card {
+            grid-template-columns: 130px 100px 1fr;
+            gap: 30px;
+            padding: 42px 38px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color .35s ease, transform .35s ease;
+        }
+        .process-grid--stacked .process-number { font-size: 6.4rem !important; }
+        .process-icon--wire .wire { width: 84px; height: 84px; }
+        .process-grid--stacked h3 { font-size: 1.7rem; margin-bottom: 6px; }
+        .process-grid--stacked .process-subtitle { color: var(--gray-300) !important; font-style: normal; margin-bottom: 14px; }
+        .process-line { color: var(--gray-300); line-height: 1.6; margin-bottom: 10px; max-width: 58ch; }
+        /* el brillo al pasar el mouse (pedido explicito 2026-09-12): luz que baja
+           desde el borde superior, sutil, solo en hover */
+        .process-card::after {
+            content: ""; position: absolute; inset: 0; pointer-events: none;
+            background: radial-gradient(640px circle at 50% -8%, rgba(255,184,0,.09), transparent 62%);
+            opacity: 0; transition: opacity .4s ease;
+        }
+        .process-card:hover::after { opacity: 1; }
+        .process-card:hover { border-color: rgba(255,184,0,.35) !important; transform: translateY(-3px); }
+        @media (max-width: 900px) {
+            .process-grid--stacked .process-card { grid-template-columns: 76px 1fr; padding: 28px 22px; }
+        }
+
+
+        /* ── lote de fixes de jueces (2026-09-12) ── */
+        .btn-primary { background: var(--white) !important; color: var(--black) !important; border-color: var(--white) !important; }
+        .btn-secondary { border-color: var(--gray-800) !important; color: var(--white) !important; }
+        .lang-btn.active, .lang-toggle .active { background: var(--gray-800) !important; color: var(--white) !important; }
+        .founder-text p { max-width: 65ch; }
+        .process-card h3 { scroll-margin-top: 90px; }
+        @media (max-width: 480px) {
+            .wa-float { width: 48px; height: 48px; font-size: 1.4rem; right: 14px; bottom: calc(14px + env(safe-area-inset-bottom)); }
+            .process-card, .founder-text { padding-bottom: 56px; }
+        }
+
+
+        /* ── proceso v3: calco Morningside, numero fuera del panel ── */
+        .process-row { display: grid; grid-template-columns: 150px 1fr; gap: 28px; align-items: center; margin-bottom: 26px; }
+        .process-number--out {
+            grid-row: auto !important;
+            font-size: 7.2rem !important;
+            text-align: center;
+            align-self: center !important;
+        }
+        .process-grid--stacked .process-card { grid-template-columns: 110px 1fr; gap: 30px; margin: 0; }
+        .process-grid--stacked .process-icon { grid-row: 1 / -1; }
+        .process-grid--stacked h3, .process-grid--stacked .process-subtitle, .process-grid--stacked .process-line { grid-column: 2; }
+        @media (max-width: 900px) {
+            .process-row { grid-template-columns: 1fr; gap: 8px; }
+            .process-number--out { font-size: 4rem !important; text-align: left; padding-left: 6px; }
+        }
+
+        /* ── jerarquia de los bloques tipograficos (kicker mono + escala) ── */
+        .sermon-kicker {
+            grid-area: 1 / 1; align-self: start; margin-top: 14vh;
+            font-family: 'JetBrains Mono', monospace; font-size: .72rem;
+            letter-spacing: .22em; text-transform: uppercase; color: var(--gray-300); opacity: .7;
+        }
+        .sermon-stage p { font-weight: 400; }
+        .sermon-stage .sermon-turn { font-weight: 700; font-size: clamp(2rem, 5vw, 3.6rem); }
+        .sermon--cierre .sermon-turn .au { color: var(--gold); }
+
+
+        /* ── lote de terminacion (jueces 2026-09-12, ronda 2) ── */
+        ::selection { background: var(--gold); color: var(--black); }
+        a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+        .cta-section h2 { color: var(--white) !important; }           /* el oro del cierre vive en "Kinto", no en el titular entero */
+        .section-label { color: var(--gray-300) !important; opacity: .8; }
+        .footer-bottom p { color: var(--gray-300) !important; }        /* antes 1.8:1 de contraste */
+        .cta-section a[href="/privacidad.html"] { color: var(--gray-300) !important; text-decoration: underline; text-underline-offset: 3px; }
+        .logo-text { line-height: 1; }
+        /* WhatsApp: de burbuja verde generica a pill de la casa */
+        .wa-float {
+            width: auto; height: auto; border-radius: 999px;
+            background: var(--black); border: 1px solid var(--gray-800);
+            color: var(--white); font-size: .9rem; font-weight: 600;
+            padding: 12px 18px; display: flex; align-items: center; gap: 9px;
+        }
+        .wa-float i { color: #25D366; font-size: 1.25rem; }
+        .wa-float:hover { border-color: var(--gold); transform: translateY(-2px); }
+        @media (max-width: 480px) { .wa-float { padding: 11px 14px; font-size: .85rem; } }
+
+
+        /* ── paquete final de jueces (2026-09-12, ronda 3) ── */
+        :root { --content-width: 1120px; interpolate-size: allow-keywords; }
+        .hero-content, .cta-content, .footer-top { max-width: var(--content-width); margin-left: auto; margin-right: auto; }
+        /* el FAQ conserva 760px a proposito: medida de lectura */
+        @media (max-width: 900px) { .founder-section { padding: 60px 20px; } }
+        @media (max-width: 480px) { .founder-text { padding-bottom: 72px; } }
+        .cta-section { margin: 80px 40px !important; border-radius: 16px !important; }
+        @media (max-width: 900px) { .cta-section { margin: 60px 16px !important; } }
+        details.faq-item::details-content {
+            opacity: 0; block-size: 0; overflow: hidden;
+            transition: content-visibility .35s allow-discrete, opacity .35s ease, block-size .35s ease;
+        }
+        details.faq-item[open]::details-content { opacity: 1; block-size: auto; }
+        .faq-item { border-radius: 16px; }
+        .btn-secondary:hover { background: transparent !important; border-color: var(--gold) !important; color: var(--gold) !important; }
+        /* logo variante 1: serif reforzada (juez de identidad) */
+        .logo { gap: 14px; }
+        .logo-text { font-size: 1.95rem; line-height: 1; letter-spacing: 1.5px; }
+        .footer-brand .logo-text { font-size: 1.3rem !important; letter-spacing: 1.2px; }
+
+
+        /* lockup B: simbolo pesado + KINTO serif + etiqueta AI mono */
+        .kinto-sym { display:block; flex-shrink:0; }
+        .logo-ai {
+            font-family: 'JetBrains Mono', monospace; font-weight: 700;
+            font-size: .78rem; letter-spacing: .12em; color: var(--gold);
+            border: 1px solid var(--gold); border-radius: 5px;
+            padding: 2px 7px; margin-left: 10px; line-height: 1;
+        }
+        .logo-ai--sm { font-size: .6rem; padding: 2px 5px; margin-left: 8px; }
+
     </style>
 </head>
 <body>
@@ -1052,24 +1239,16 @@
     ========================================== -->
     <header id="header">
         <div class="logo">
-            <div class="kinto-logo">
-                <div class="k-line k-line-1"></div>
-                <div class="k-line k-line-2"></div>
-                <div class="k-node k-n1"></div>
-                <div class="k-node k-n2"></div>
-                <div class="k-node k-n3"></div>
-                <div class="k-node k-n4"></div>
-                <div class="k-node k-nc"></div>
-            </div>
-            <span class="logo-text">KINTO</span>
+            <svg class="kinto-sym" width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><g stroke="#FFB800" stroke-width="10" stroke-linecap="round"><line x1="28" y1="28" x2="72" y2="72"/><line x1="72" y1="28" x2="28" y2="72"/></g><circle cx="50" cy="50" r="11" fill="#FFB800"/><circle cx="16" cy="16" r="8" fill="#FFB800"/><circle cx="84" cy="16" r="8" fill="#FFB800"/><circle cx="16" cy="84" r="8" fill="#FFB800"/><circle cx="84" cy="84" r="8" fill="#FFB800"/></svg>
+            <span class="logo-text">KINTO</span><span class="logo-ai">AI</span>
         </div>
 
         <nav id="nav">
-            <a href="#hero" data-es="Inicio" data-en="Home">Inicio</a>
+            
             <a href="#proceso" data-es="Servicios" data-en="Services">Servicios</a>
             <a href="#fundador" data-es="Nosotros" data-en="About">Nosotros</a>
             <a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a>
-            <a href="javascript:void(0)" data-cal-link="kinto-ai-aus0dx/kinto-ai-call" data-cal-config='{"layout":"month_view","theme":"dark"}' class="nav-cta" data-es="Agenda una Llamada" data-en="Book a Call">Agenda una Llamada</a>
+            <a href="javascript:void(0)" data-cal-link="kinto-ai-aus0dx/kinto-ai-call" data-cal-config='{"layout":"month_view","theme":"dark"}' class="nav-cta" data-es="Agendar Llamada" data-en="Book a Call">Agendar Llamada</a>
             <div class="lang-toggle">
                 <button class="lang-btn active" onclick="setLang('es')">ES</button>
                 <button class="lang-btn" onclick="setLang('en')">EN</button>
@@ -1089,12 +1268,12 @@
     <section class="hero" id="hero">
         <div class="organic-shape"></div>
         <div class="hero-content">
-            <h1 id="hero-title" data-es="Automatización con IA" data-en="AI Automation"></h1>
-            <p class="hero-subtitle typing-hidden" data-es="Escala tu negocio sin aumentar tu equipo." data-en="Scale your business without growing your team.">Escala tu negocio sin aumentar tu equipo.</p>
-            <p class="typing-hidden" data-es="Convierte los cuellos de botella de tu día a día en flujos de trabajo con IA, listos para usarse, que realmente se implementan y generan ingresos, sin que tengas que volverte un experto en tecnología." data-en="Turn your daily bottlenecks into ready-to-use AI workflows that actually get implemented and generate revenue, without becoming a tech expert.">Convierte los cuellos de botella de tu día a día en flujos de trabajo con IA, listos para usarse, que realmente se implementan y generan ingresos, sin que tengas que volverte un experto en tecnología.</p>
+            <h1 id="hero-title" data-es="El trabajo repetitivo, resuelto&nbsp;con&nbsp;<span class='au'>IA</span>." data-en="Repetitive work, solved&nbsp;with&nbsp;<span class='au'>AI</span>."></h1>
+            <p class="hero-subtitle typing-hidden" data-es="Escale su negocio sin aumentar su equipo." data-en="Scale your business without growing your team.">Escale su negocio sin aumentar su equipo.</p>
+            <p class="typing-hidden" data-es="Convertimos lo que le quita horas cada semana en un sistema que su equipo sí usa. Sin que tenga que volverse experto en tecnología." data-en="We turn what eats your hours every week into a system your team actually uses. No need to become a tech expert.">Convertimos lo que le quita horas cada semana en un sistema que su equipo sí usa. Sin que tenga que volverse experto en tecnología.</p>
             <div class="hero-buttons typing-hidden">
-                <a href="javascript:void(0)" data-cal-link="kinto-ai-aus0dx/kinto-ai-call" data-cal-config='{"layout":"month_view","theme":"dark"}' class="btn btn-primary" data-es="Agenda una Llamada" data-en="Book a Call">Agenda una Llamada</a>
-                <a href="#proceso" class="btn btn-secondary" data-es="Ver Cómo Funciona" data-en="See How It Works">Ver Cómo Funciona</a>
+                <a href="javascript:void(0)" data-cal-link="kinto-ai-aus0dx/kinto-ai-call" data-cal-config='{"layout":"month_view","theme":"dark"}' class="btn btn-primary" data-es="Agende una Llamada" data-en="Book a Call">Agende una Llamada</a>
+                <a href="https://wa.me/50687020081?text=Hola%2C%20quiero%20automatizar%20un%20proceso%20de%20mi%20empresa" target="_blank" rel="noopener" class="btn btn-secondary" data-es="Escr&iacute;banos por WhatsApp" data-en="Message us on WhatsApp">Escr&iacute;banos por WhatsApp</a>
             </div>
         </div>
     </section>
@@ -1102,53 +1281,61 @@
     <!-- ==========================================
          PROCESS SECTION
     ========================================== -->
-    <section class="section" id="proceso" data-sc-act="flow" data-sc-drift="#0B0B0B">
+
+    <!-- MOCKUP · sermón tipográfico estilo Morningside: cada frase entra
+         mientras la anterior se va, ligado al scroll (motor ya montado) -->
+    <section class="sermon" data-sc-act="pin" data-sc-span="1.8" data-sc-drift="#0B0B0B">
+        <div data-sc-stage class="sc-stage sermon-stage">
+            <span class="sermon-kicker" data-es="EL PROBLEMA" data-en="THE PROBLEM">EL PROBLEMA</span>
+            <p data-sc-cue="0 0.30 0" data-es="Los pedidos se anotan en una hoja y se vuelven a escribir en el sistema. Todos los días." data-en="Orders get written down on a sheet and typed into the system again. Every day.">Los pedidos se anotan en una hoja y se vuelven a escribir en el sistema. Todos los días.</p>
+            <p data-sc-cue="0.24 0.54" data-es="Los reportes se arman copiando y pegando. Semana tras semana." data-en="Reports get built by copy and paste. Week after week.">Los reportes se arman copiando y pegando. Semana tras semana.</p>
+            <p data-sc-cue="0.48 0.76" data-es="Las cotizaciones y los seguimientos se hacen a mano, uno por uno, todos los meses." data-en="Quotes and follow-ups get done by hand, one by one, every month.">Las cotizaciones y los seguimientos se hacen a mano, uno por uno, todos los meses.</p>
+            <p data-sc-cue="0.72" class="sermon-turn" data-es="No es que nadie sepa hacerlo. Es que hacerlo cuesta horas que no vuelven." data-en="It is not that nobody knows how. It is that doing it costs hours that never come back.">No es que nadie sepa hacerlo. Es que hacerlo cuesta horas que no vuelven.</p>
+        </div>
+    </section>
+
+    <section class="section" id="proceso" data-sc-act="flow" data-sc-drift="#191307">
         <div class="fade-up">
             <p class="section-label" data-es="CÓMO TRABAJAMOS" data-en="HOW WE WORK">CÓMO TRABAJAMOS</p>
             <h2 class="section-title" data-es="Nuestro Proceso" data-en="Our Process">Nuestro Proceso</h2>
-            <p class="section-description" data-es="Un enfoque metódico y de bajo riesgo que comienza entendiendo tu negocio, no saltando directamente a las herramientas." data-en="A methodical, low-risk approach that starts with understanding your business - not jumping straight into tools.">Un enfoque metódico y de bajo riesgo que comienza entendiendo tu negocio, no saltando directamente a las herramientas.</p>
+            <p class="section-description" data-es="Un enfoque metódico y de bajo riesgo que comienza entendiendo su negocio, no saltando directamente a las herramientas." data-en="A methodical, low-risk approach that starts with understanding your business - not jumping straight into tools.">Un enfoque metódico y de bajo riesgo que comienza entendiendo su negocio, no saltando directamente a las herramientas.</p>
         </div>
 
-        <div class="process-grid" data-sc-in data-sc-stagger="180">
+        <div class="process-grid process-grid--stacked">
             <!-- Card 1: Discover & Diagnose -->
-            <div class="process-card">
-                <div class="process-number" data-count="1">01</div>
-                <div class="process-icon"><i class="fas fa-magnifying-glass"></i></div>
+            <div class="process-row" data-sc-in>
+                <div class="process-number process-number--out" data-count="1">01</div>
+                <div class="process-card">
+                <div class="process-icon process-icon--wire"><svg class="wire" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="22"/><circle cx="30" cy="30" r="13"/><circle cx="30" cy="30" r="4"/><path d="M30 2v10M30 48v10M2 30h10M48 30h10"/></svg></div>
                 <h3 data-es="Descubrir y Diagnosticar" data-en="Discover &amp; Diagnose">Descubrir y Diagnosticar</h3>
                 <p class="process-subtitle" data-es="Primero entender, después automatizar." data-en="Understand first, automate second.">Primero entender, después automatizar.</p>
-                <ul>
-                    <li data-es="Aprendemos cómo funciona realmente tu negocio: objetivos, restricciones, traspasos y cómo se ve el éxito." data-en="We learn how your business actually works: goals, constraints, handoffs, and what a 'win' looks like.">Aprendemos cómo funciona realmente tu negocio: objetivos, restricciones, traspasos y cómo se ve el éxito.</li>
-                    <li data-es="Mapeamos tu stack tecnológico y dónde viven los datos: CRMs, bandejas de entrada, hojas de cálculo, herramientas internas." data-en="We map your tech stack and where data lives: CRMs, inboxes, spreadsheets, internal tools.">Mapeamos tu stack tecnológico y dónde viven los datos: CRMs, bandejas de entrada, hojas de cálculo, herramientas internas.</li>
-                    <li data-es="Auditamos procesos para encontrar cuellos de botella reales y decidir qué debe y qué no debe automatizarse." data-en="We audit processes to find real bottlenecks and decide what should and shouldn't be automated.">Auditamos procesos para encontrar cuellos de botella reales y decidir qué debe y qué no debe automatizarse.</li>
-                </ul>
+                <p class="process-line" data-es="Primero entendemos c&oacute;mo funciona su negocio y d&oacute;nde vive su informaci&oacute;n: correos, hojas de c&aacute;lculo, el sistema que ya usa. Encontramos los cuellos de botella reales y decidimos qu&eacute; vale la pena automatizar, y qu&eacute; no." data-en="First we understand how your business works and where your information lives: emails, spreadsheets, the system you already use. We find the real bottlenecks and decide what is worth automating, and what is not.">Primero entendemos c&oacute;mo funciona su negocio y d&oacute;nde vive su informaci&oacute;n: correos, hojas de c&aacute;lculo, el sistema que ya usa. Encontramos los cuellos de botella reales y decidimos qu&eacute; vale la pena automatizar, y qu&eacute; no.</p>
+                </div>
             </div>
 
             <!-- Card 2: Design, Build & Validate -->
-            <div class="process-card">
-                <div class="process-number" data-count="2">02</div>
-                <div class="process-icon"><i class="fas fa-code"></i></div>
+            <div class="process-row" data-sc-in>
+                <div class="process-number process-number--out" data-count="2">02</div>
+                <div class="process-card">
+                <div class="process-icon process-icon--wire"><svg class="wire" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 8 52 20 30 32 8 20Z"/><path d="M30 20 52 32 30 44 8 32Z"/><path d="M30 32 52 44 30 56 8 44Z"/></svg></div>
                 <h3 data-es="Diseñar, Construir y Validar" data-en="Design, Build &amp; Validate">Diseñar, Construir y Validar</h3>
                 <p class="process-subtitle" data-es="Soluciones personalizadas, probadas antes del lanzamiento." data-en="Custom solutions, tested before launch.">Soluciones personalizadas, probadas antes del lanzamiento.</p>
-                <ul>
-                    <li data-es="Priorizamos oportunidades de alto impacto y decidimos dónde la IA ayuda y dónde no." data-en="We prioritize high-impact opportunities and decide where AI helps, and where it doesn't.">Priorizamos oportunidades de alto impacto y decidimos dónde la IA ayuda y dónde no.</li>
-                    <li data-es="Diseñamos y construimos flujos de trabajo personalizados, probamos diferentes enfoques con datos reales y explicamos nuestras decisiones en lenguaje simple." data-en="We design and build custom workflows, test different approaches on real data, and explain our choices in plain language.">Diseñamos y construimos flujos de trabajo personalizados, probamos diferentes enfoques con datos reales y explicamos nuestras decisiones en lenguaje simple.</li>
-                    <li data-es="Ejecutamos evaluaciones en un entorno real antes del despliegue completo." data-en="We run evaluations in a real-world environment before full rollout.">Ejecutamos evaluaciones en un entorno real antes del despliegue completo.</li>
-                </ul>
+                <p class="process-line" data-es="Construimos el flujo a la medida de su operaci&oacute;n y lo probamos con datos reales. Cada decisi&oacute;n se explica en lenguaje simple, antes de lanzar nada." data-en="We build the workflow around your operation and test it with real data. Every decision is explained in plain language before anything goes live.">Construimos el flujo a la medida de su operaci&oacute;n y lo probamos con datos reales. Cada decisi&oacute;n se explica en lenguaje simple, antes de lanzar nada.</p>
+                </div>
             </div>
 
             <!-- Card 3: Launch, Monitor & Optimize -->
-            <div class="process-card">
-                <div class="process-number" data-count="3">03</div>
-                <div class="process-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="process-row" data-sc-in>
+                <div class="process-number process-number--out" data-count="3">03</div>
+                <div class="process-card">
+                <div class="process-icon process-icon--wire"><svg class="wire" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="34" r="18"/><path d="M30 44V16M30 16l-9 9M30 16l9 9"/><path d="M12 10h8M40 10h8" opacity=".4"/></svg></div>
                 <h3 data-es="Lanzar, Monitorear y Optimizar" data-en="Launch, Monitor &amp; Optimize">Lanzar, Monitorear y Optimizar</h3>
                 <p class="process-subtitle" data-es="Mejora continua, no un proyecto único." data-en="Continuous improvement, not a one-off project.">Mejora continua, no un proyecto único.</p>
-                <ul>
-                    <li data-es="Lanzamos a producción con métricas de éxito claras y salvaguardas." data-en="We launch into production with clear success metrics and safeguards.">Lanzamos a producción con métricas de éxito claras y salvaguardas.</li>
-                    <li data-es="Monitoreamos el rendimiento, recopilamos feedback de tu equipo y clientes, y solucionamos problemas rápidamente." data-en="We monitor performance, collect feedback from your team and customers, and fix issues quickly.">Monitoreamos el rendimiento, recopilamos feedback de tu equipo y clientes, y solucionamos problemas rápidamente.</li>
-                    <li data-es="Refinamos continuamente prompts, lógica y modelos para que el sistema mejore a medida que tu negocio evoluciona." data-en="We continuously refine prompts, logic, and models so the system improves as your business evolves.">Refinamos continuamente prompts, lógica y modelos para que el sistema mejore a medida que tu negocio evoluciona.</li>
-                </ul>
+                <p class="process-line" data-es="Lanzamos con m&eacute;tricas claras y vigilamos el rendimiento de cerca. El sistema se ajusta y mejora conforme su negocio cambia." data-en="We launch with clear metrics and watch performance closely. The system keeps adjusting and improving as your business changes.">Lanzamos con m&eacute;tricas claras y vigilamos el rendimiento de cerca. El sistema se ajusta y mejora conforme su negocio cambia.</p>
+                </div>
             </div>
-        </div>
+
+            </div>
     </section>
 
     <!-- ==========================================
@@ -1162,9 +1349,9 @@
             <div class="founder-text fade-right">
                 <p class="section-label" data-es="Conoce al Fundador" data-en="Meet the Founder">Conoce al Fundador</p>
                 <h2 data-es="Kendal Segura" data-en="Kendal Segura">Kendal Segura</h2>
-                <p data-es="Creador de soluciones de automatización y entusiasta de la Inteligencia Artificial aplicada. Graduado en Recursos Humanos, cuenta con una ventaja competitiva poco común en el sector tecnológico: una profunda comprensión académica de cómo funcionan los equipos y las personas dentro de una organización." data-en="Automation solutions creator and applied Artificial Intelligence enthusiast. With a degree in Human Resources, he has an uncommon competitive advantage in the tech sector: a deep academic understanding of how teams and people work within an organization.">Creador de soluciones de automatización y entusiasta de la Inteligencia Artificial aplicada. Graduado en Recursos Humanos, cuenta con una ventaja competitiva poco común en el sector tecnológico: una profunda comprensión académica de cómo funcionan los equipos y las personas dentro de una organización.</p>
-                <p data-es="Al analizar el futuro del trabajo durante su formación, Kendal decidió no seguir la ruta corporativa tradicional. En su lugar, optó por especializarse en la tecnología que está redefiniendo el empleo: la Inteligencia Artificial. Su objetivo fue claro desde el inicio: dominar las herramientas que pueden liberar el verdadero potencial humano." data-en="While analyzing the future of work during his studies, Kendal decided not to follow the traditional corporate route. Instead, he chose to specialize in the technology that is redefining employment: Artificial Intelligence. His goal was clear from the start: master the tools that can unlock true human potential.">Al analizar el futuro del trabajo durante su formación, Kendal decidió no seguir la ruta corporativa tradicional. En su lugar, optó por especializarse en la tecnología que está redefiniendo el empleo: la Inteligencia Artificial. Su objetivo fue claro desde el inicio: dominar las herramientas que pueden liberar el verdadero potencial humano.</p>
-                <p data-es="Hoy, a través de KINTO AI, ayuda a pequeñas y medianas empresas a modernizar sus operaciones. Su enfoque es consultivo y personalizado: primero estudia las necesidades del negocio para diseñar el flujo de trabajo ideal, implementando sistemas de IA que no solo eliminan tareas repetitivas, sino que ayudan a sus clientes a vender más y crecer de manera sostenible." data-en="Today, through KINTO AI, he helps small and medium businesses modernize their operations. His approach is consultative and personalized: first studying business needs to design the ideal workflow, implementing AI systems that not only eliminate repetitive tasks but help clients sell more and grow sustainably.">Hoy, a través de KINTO AI, ayuda a pequeñas y medianas empresas a modernizar sus operaciones. Su enfoque es consultivo y personalizado: primero estudia las necesidades del negocio para diseñar el flujo de trabajo ideal, implementando sistemas de IA que no solo eliminan tareas repetitivas, sino que ayudan a sus clientes a vender más y crecer de manera sostenible.</p>
+                <p data-es="Graduado en Recursos Humanos, Kendal Segura tiene una ventaja poco com&uacute;n en el sector tecnol&oacute;gico: entiende, a nivel acad&eacute;mico, c&oacute;mo funcionan los equipos y las personas dentro de una empresa." data-en="With a degree in Human Resources, Kendal Segura has an uncommon advantage in the tech sector: an academic understanding of how teams and people actually work inside a company.">Graduado en Recursos Humanos, Kendal Segura tiene una ventaja poco com&uacute;n en el sector tecnol&oacute;gico: entiende, a nivel acad&eacute;mico, c&oacute;mo funcionan los equipos y las personas dentro de una empresa.</p>
+                <p data-es="Antes de construir automatizaciones, Kendal estudió cómo trabajan los equipos. Por eso no diseña automatizaciones que la gente termine evitando: diseña las que su equipo realmente va a usar." data-en="Before building automations, Kendal studied how teams actually work. That is why he does not design automations people end up avoiding: he designs the ones your team will actually use.">Antes de construir automatizaciones, Kendal estudió cómo trabajan los equipos. Por eso no diseña automatizaciones que la gente termine evitando: diseña las que su equipo realmente va a usar.</p>
+                <p data-es="Hoy, a trav&eacute;s de KINTO AI, trabaja con peque&ntilde;as y medianas empresas de sectores muy distintos. Cada proyecto empieza por su negocio puntual, no por una plantilla gen&eacute;rica." data-en="Today, through KINTO AI, he works with small and medium businesses across very different industries. Every project starts with your specific business, not a generic template. He builds with the same AI tools he then installs in each company, and everything stays documented.">Hoy, a trav&eacute;s de KINTO AI, trabaja con peque&ntilde;as y medianas empresas de sectores muy distintos. Cada proyecto empieza por su negocio puntual, no por una plantilla gen&eacute;rica. Construye con las mismas herramientas de IA que despu&eacute;s instala en cada empresa, y todo queda documentado.</p>
                 <div class="founder-cta">
                     <a href="javascript:void(0)" data-cal-link="kinto-ai-aus0dx/kinto-ai-call" data-cal-config='{"layout":"month_view","theme":"dark"}' class="btn btn-primary" data-es="Trabajemos Juntos" data-en="Let's Work Together">Trabajemos Juntos</a>
                 </div>
@@ -1177,11 +1364,56 @@
          CTA SECTION
     ========================================== -->
 
-    <section class="cta-section" id="contact" data-sc-act="flow" data-sc-drift="#12100a">
+
+    <!-- MOCKUP · FAQ en la home (decision 2026-09-12, revierte la de sacarla) -->
+    <section class="section" id="faq-home" data-sc-act="flow" data-sc-drift="#0E0E11">
+        <div class="fade-up">
+            <p class="section-label" data-es="PREGUNTAS FRECUENTES" data-en="FAQ">PREGUNTAS FRECUENTES</p>
+            <h2 class="section-title" data-es="Lo que suelen preguntar" data-en="What owners usually ask">Lo que suelen preguntar</h2>
+        </div>
+        <div class="faq-list" data-sc-in>
+            <details class="faq-item" open>
+                <summary data-es="&iquest;Qu&eacute; procesos se pueden automatizar en mi empresa?" data-en="What processes can be automated in my company?">&iquest;Qu&eacute; procesos se pueden automatizar en mi empresa?</summary>
+                <div class="faq-body"><p data-es="Los que alguien de su equipo hace a mano todos los d&iacute;as o todas las semanas siguiendo los mismos pasos. Si usted puede explicar el proceso paso a paso, casi seguro se puede automatizar." data-en="The ones someone on your team does by hand every day or every week, following the same steps. If you can explain the process step by step, it can almost certainly be automated.">Los que alguien de su equipo hace a mano todos los d&iacute;as o todas las semanas siguiendo los mismos pasos. Si usted puede explicar el proceso paso a paso, casi seguro se puede automatizar.</p></div>
+            </details>
+            <details class="faq-item">
+                <summary data-es="&iquest;Tengo que saber de tecnolog&iacute;a?" data-en="Do I need to know about technology?">&iquest;Tengo que saber de tecnolog&iacute;a?</summary>
+                <div class="faq-body"><p data-es="No. Usted explica su proceso en su propio lenguaje y KINTO AI se encarga de la parte t&eacute;cnica. Las herramientas se entregan listas para que su equipo las use." data-en="No. You explain your process in your own words and KINTO AI takes care of the technical side. The tools are delivered ready for your team to use.">No. Usted explica su proceso en su propio lenguaje y KINTO AI se encarga de la parte t&eacute;cnica. Las herramientas se entregan listas para que su equipo las use.</p></div>
+            </details>
+            <details class="faq-item">
+                <summary data-es="&iquest;Cu&aacute;nto cuesta?" data-en="How much does it cost?">&iquest;Cu&aacute;nto cuesta?</summary>
+                <div class="faq-body"><p data-es="Depende del proceso y del ahorro que genere. En la llamada de descubrimiento se estima ese ahorro y sobre eso se cotiza, antes de construir nada y sin compromiso." data-en="It depends on the process and the savings it generates. In the discovery call we estimate those savings and quote based on that, before anything is built and with no commitment.">Depende del proceso y del ahorro que genere. En la llamada de descubrimiento se estima ese ahorro y sobre eso se cotiza, antes de construir nada y sin compromiso.</p></div>
+            </details>
+            <details class="faq-item">
+                <summary data-es="&iquest;Cu&aacute;nto tarda y qu&eacute; necesito tener?" data-en="How long does it take and what do I need?">&iquest;Cu&aacute;nto tarda y qu&eacute; necesito tener?</summary>
+                <div class="faq-body"><p data-es="Un proyecto t&iacute;pico se entrega en semanas, no en meses. Se necesita acceso a los archivos o sistemas donde vive el proceso y una persona que lo conozca bien." data-en="A typical project is delivered in weeks, not months. What is needed: access to the files or systems where the process lives, and someone who knows it well.">Un proyecto t&iacute;pico se entrega en semanas, no en meses. Se necesita acceso a los archivos o sistemas donde vive el proceso y una persona que lo conozca bien.</p></div>
+            </details>
+            <details class="faq-item">
+                <summary data-es="&iquest;Me quedo amarrado a KINTO AI, o el sistema queda en mi empresa?" data-en="Am I locked into KINTO AI, or does the system stay with my company?">&iquest;Me quedo amarrado a KINTO AI, o el sistema queda en mi empresa?</summary>
+                <div class="faq-body"><p data-es="El sistema queda en las cuentas de su empresa, documentado: no depende de que usted siga trabajando con KINTO AI. Cada proyecto incluye adem&aacute;s un per&iacute;odo de acompa&ntilde;amiento definido en su propuesta, y despu&eacute;s hay mantenimiento mensual opcional si lo necesita." data-en="The system stays in your company&#39;s own accounts, documented: it does not depend on you continuing to work with KINTO AI. Each project also includes a support period defined in its proposal, plus an optional monthly maintenance plan if you need it.">El sistema queda en las cuentas de su empresa, documentado: no depende de que usted siga trabajando con KINTO AI. Cada proyecto incluye adem&aacute;s un per&iacute;odo de acompa&ntilde;amiento definido en su propuesta, y despu&eacute;s hay mantenimiento mensual opcional si lo necesita.</p></div>
+            </details>
+            <details class="faq-item">
+                <summary data-es="&iquest;C&oacute;mo empieza un proyecto?" data-en="How does a project start?">&iquest;C&oacute;mo empieza un proyecto?</summary>
+                <div class="faq-body"><p data-es="Escribiendo al WhatsApp de KINTO AI, donde recibe respuesta de inmediato. Si hay una oportunidad clara, se estima el ahorro y se presenta una propuesta formal. Nada se construye sin su aprobaci&oacute;n por escrito." data-en="By writing to KINTO AI on WhatsApp, where you get an immediate reply. If there is a clear opportunity, the savings are estimated and a formal proposal is presented. Nothing gets built without your written approval.">Escribiendo al WhatsApp de KINTO AI, donde recibe respuesta de inmediato. Si hay una oportunidad clara, se estima el ahorro y se presenta una propuesta formal. Nada se construye sin su aprobaci&oacute;n por escrito.</p></div>
+            </details>
+        </div>
+    </section>
+
+    <!-- MOCKUP · cierre tipografico (adaptacion propia del cierre de Morningside) -->
+    <section class="sermon sermon--cierre" data-sc-act="pin" data-sc-span="1.6" data-sc-drift="#191307">
+        <div data-sc-stage class="sc-stage sermon-stage">
+            <p data-sc-cue="0 0.36 0" data-es="La IA ya lleg&oacute;." data-en="AI is already here.">La IA ya lleg&oacute;.</p>
+            <p data-sc-cue="0.30 0.62" data-es="La mayor&iacute;a va a reaccionar cuando no quede de otra." data-en="Most will react when there is no other choice.">La mayor&iacute;a va a reaccionar cuando no quede de otra.</p>
+            <p data-sc-cue="0.56" class="sermon-turn" data-es="<span class='au'>Kinto</span> trabaja con los que se mueven antes." data-en="<span class='au'>Kinto</span> works with those who move first."><span class="au">Kinto</span> trabaja con los que se mueven antes.</p>
+        </div>
+    </section>
+
+    <section class="cta-section" id="contact" data-sc-act="flow" data-sc-drift="#1a1408">
         <div class="cta-content fade-scale">
-            <h2 data-es="Escala tu Negocio con IA" data-en="Scale Your Business with AI">Escala tu Negocio con IA</h2>
-            <p data-es="Agenda una llamada de 15 minutos. Sin compromiso, sin jerga técnica. Solo soluciones reales para tu negocio." data-en="Book a 15-minute call. No commitment, no technical jargon. Just real solutions for your business.">Agenda una llamada de 15 minutos. Sin compromiso, sin jerga técnica. Solo soluciones reales para tu negocio.</p>
-            <a href="javascript:void(0)" data-cal-link="kinto-ai-aus0dx/kinto-ai-call" data-cal-config='{"layout":"month_view","theme":"dark"}' class="btn btn-primary" data-es="Agenda tu Llamada" data-en="Book Your Call">Agenda tu Llamada</a>
+            <h2 data-es="Mu&eacute;vase primero, empezando por su negocio, no por la tecnolog&iacute;a." data-en="Move first, starting with your business, not the technology.">Mu&eacute;vase primero, empezando por su negocio, no por la tecnolog&iacute;a.</h2>
+            <p data-es="No importa a qué se dedique su empresa: si algo se repite todas las semanas, se puede automatizar. Agende una llamada de descubrimiento, sin compromiso y sin jerga técnica." data-en="It does not matter what your company does: if something repeats every week, it can be automated. Book a discovery call, no commitment and no jargon.">No importa a qué se dedique su empresa: si algo se repite todas las semanas, se puede automatizar. Agende una llamada de descubrimiento, sin compromiso y sin jerga técnica.</p>
+            <a href="javascript:void(0)" data-cal-link="kinto-ai-aus0dx/kinto-ai-call" data-cal-config='{"layout":"month_view","theme":"dark"}' class="btn btn-primary" data-es="Agende su Llamada" data-en="Book Your Call">Agende su Llamada</a>
+            <a href="https://wa.me/50687020081?text=Hola%2C%20quiero%20automatizar%20un%20proceso%20de%20mi%20empresa" target="_blank" rel="noopener" class="btn btn-secondary" style="margin-left:12px" data-es="o escr&iacute;banos por WhatsApp" data-en="or message us on WhatsApp">o escr&iacute;banos por WhatsApp</a>
             <p style="font-size: 0.82rem; color: var(--gray-300); margin-top: 18px; max-width: 520px; margin-left:auto; margin-right:auto;" data-es="La llamada es por videoconferencia y se graba para dar seguimiento a lo conversado. M&aacute;s detalles en la <a href='/privacidad.html' style='color: var(--gold);'>Pol&iacute;tica de Privacidad</a>." data-en="The call happens over video conference and is recorded to follow up on what was discussed. Details in the <a href='/privacidad.html' style='color: var(--gold);'>Privacy Policy</a>.">La llamada es por videoconferencia y se graba para dar seguimiento a lo conversado. M&aacute;s detalles en la <a href="/privacidad.html" style="color: var(--gold);">Pol&iacute;tica de Privacidad</a>.</p>
         </div>
     </section>
@@ -1193,23 +1425,14 @@
         <div class="footer-top">
             <div class="footer-brand-section">
                 <div class="footer-brand">
-                    <div class="kinto-logo">
-                        <div class="k-line k-line-1"></div>
-                        <div class="k-line k-line-2"></div>
-                        <div class="k-node k-n1"></div>
-                        <div class="k-node k-n2"></div>
-                        <div class="k-node k-n3"></div>
-                        <div class="k-node k-n4"></div>
-                        <div class="k-node k-nc"></div>
-                    </div>
-                    <span style="font-family: 'Cormorant Garamond', serif; font-weight: 700; color: var(--gold); font-size: 1.2rem;">KINTO</span>
+                    <svg class="kinto-sym" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true"><g stroke="#FFB800" stroke-width="10" stroke-linecap="round"><line x1="28" y1="28" x2="72" y2="72"/><line x1="72" y1="28" x2="28" y2="72"/></g><circle cx="50" cy="50" r="11" fill="#FFB800"/><circle cx="16" cy="16" r="8" fill="#FFB800"/><circle cx="84" cy="16" r="8" fill="#FFB800"/><circle cx="16" cy="84" r="8" fill="#FFB800"/><circle cx="84" cy="84" r="8" fill="#FFB800"/></svg>
+                    <span class="logo-text" style="font-size:1.2rem">KINTO</span><span class="logo-ai logo-ai--sm">AI</span>
                 </div>
-                <p class="footer-brand-description" data-es="Construyendo la próxima generación de automatización empresarial inteligente usando estrategias de IA orgánicas y centradas en el humano." data-en="Building the next generation of intelligent business automation using organic, human-centric AI strategies.">Construyendo la próxima generación de automatización empresarial inteligente usando estrategias de IA orgánicas y centradas en el humano.</p>
+                <p class="footer-brand-description" data-es="Automatización con IA para negocios que no tienen tiempo para tecnología complicada." data-en="AI automation for businesses that do not have time for complicated technology.">Automatización con IA para negocios que no tienen tiempo para tecnología complicada.</p>
             </div>
             <div class="footer-links">
                 <h4 data-es="Empresa" data-en="Company">Empresa</h4>
                 <ul>
-                    <li><a href="#hero" data-es="Inicio" data-en="Home">Inicio</a></li>
                     <li><a href="#proceso" data-es="Servicios" data-en="Services">Servicios</a></li>
                     <li><a href="#fundador" data-es="Nosotros" data-en="About">Nosotros</a></li>
                     <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
@@ -1228,7 +1451,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 KINTO AI. <span data-es="Todos los derechos reservados." data-en="All rights reserved.">Todos los derechos reservados.</span></p>
+            <p>&copy; 2026 KINTO AI. <span data-es="Todos los derechos reservados." data-en="All rights reserved.">Todos los derechos reservados.</span></p>
         </div>
     </footer>
 
@@ -1303,7 +1526,9 @@
             const heroTitle = document.getElementById('hero-title');
             const text = heroTitle.getAttribute('data-' + currentLang);
             if (typingTimer) clearTimeout(typingTimer);
-            heroTitle.innerHTML = '';
+            heroTitle.innerHTML = text;
+            document.querySelectorAll('.typing-hidden').forEach(el => { el.classList.remove('typing-hidden'); el.classList.add('typing-revealed'); });
+            return;
 
             const cursor = document.createElement('span');
             cursor.className = 'typing-cursor';
@@ -1501,7 +1726,7 @@
          propia y NO esta marcado. sc-motion.css trae solo la maquinaria,
          sin el reset del motor, para no pisar los estilos del sitio.
     ============================================ -->
-    <a class="wa-float" href="https://wa.me/50687020081" target="_blank" rel="noopener" aria-label="WhatsApp KINTO AI"><i class="fab fa-whatsapp"></i></a>
+    <a class="wa-float" href="https://wa.me/50687020081" target="_blank" rel="noopener" aria-label="WhatsApp KINTO AI"><i class="fab fa-whatsapp"></i><span data-es="Escr&iacute;banos" data-en="Chat with us">Escr&iacute;banos</span></a>
 
     <script src="assets/scrollcraft.js"></script>
     <script>ScrollCraft.mount(document.body);</script>
